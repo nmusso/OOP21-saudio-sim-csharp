@@ -1,6 +1,6 @@
 using System;
 
-namespace OOP_saudio_sim_csharp.Presepi
+namespace OOP_saudio_sim_csharp.Utility
 {
     public class Vec3F
     {
