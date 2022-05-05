@@ -1,8 +1,10 @@
+using OOP_saudio_sim_csharp.Utility;
+
 namespace OOP_saudio_sim_csharp.Sciarrillo
 {
     public interface ISource
     {
-        int Position { get; set; }
+        Vec3F Position { get; set; }
         int Id { get; }
         bool IsPlaying { get; }
         

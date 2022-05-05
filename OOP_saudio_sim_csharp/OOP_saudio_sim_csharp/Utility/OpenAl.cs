@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 namespace OOP_saudio_sim_csharp.Utility
 {
     public class OpenAl
@@ -13,5 +15,16 @@ namespace OOP_saudio_sim_csharp.Utility
         public static void SetValue()
         {
         }
+
+        public static int alGenSources()
+        {
+            return 0;
+        }
+
+        public static void alSource3f(int id, float x, float y, float z)
+        {
+        }
+        
+        
     }
 }

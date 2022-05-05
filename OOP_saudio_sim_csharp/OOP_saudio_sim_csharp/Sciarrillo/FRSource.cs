@@ -1,3 +1,5 @@
+using OOP_saudio_sim_csharp.Utility;
+
 namespace OOP_saudio_sim_csharp.Sciarrillo
 {
     public class FRSource : Source, IFRSource
@@ -8,7 +10,7 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
         {
         }
 
-        public FRSource(int position, SourceType type) : base(position)
+        public FRSource(Vec3F position, SourceType type) : base(position)
         {
         }
     }
