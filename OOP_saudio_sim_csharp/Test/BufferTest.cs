@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OOP_saudio_sim_csharp.Mussoni;
 
-namespace Buffer
+namespace OOP_saudio_sim_csharp.Test
 {
     [TestClass]
     public class BufferTest
