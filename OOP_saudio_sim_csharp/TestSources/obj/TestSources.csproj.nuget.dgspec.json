@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/TestSources/TestSources.csproj": {}
+  },
+  "projects": {
+    "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/TestSources/TestSources.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/TestSources/TestSources.csproj",
+        "projectName": "TestSources",
+        "projectPath": "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/TestSources/TestSources.csproj",
+        "packagesPath": "/home/sciro/.nuget/packages/",
+        "outputPath": "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/TestSources/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/sciro/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.16.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
