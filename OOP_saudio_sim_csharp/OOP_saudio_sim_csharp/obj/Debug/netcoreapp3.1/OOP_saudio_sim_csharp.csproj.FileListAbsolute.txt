@@ -1,0 +1,13 @@
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\bin\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.exe
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\bin\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.deps.json
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\bin\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.runtimeconfig.json
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\bin\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.runtimeconfig.dev.json
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\bin\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.dll
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\bin\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.pdb
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\obj\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.csprojAssemblyReference.cache
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\obj\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.AssemblyInfoInputs.cache
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\obj\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.AssemblyInfo.cs
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\obj\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.csproj.CoreCompileInputs.cache
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\obj\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.dll
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\obj\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.pdb
+C:\Users\nicco\project_workspace\OOP21-saudio-sim-csharp\OOP_saudio_sim_csharp\OOP_saudio_sim_csharp\obj\Debug\netcoreapp3.1\OOP_saudio_sim_csharp.genruntimeconfig.cache
