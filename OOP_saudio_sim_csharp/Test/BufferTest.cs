@@ -1,14 +1,13 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using OOP_saudio_sim_csharp.Mussoni;
 
 namespace OOP_saudio_sim_csharp.Test
 {
-    [TestClass]
     public class BufferTest
     {
         const string PATH = "dir";
 
-        [TestMethod]
+        [Test]
         public void TestCreateFromPath()
         {
             IBufferFactory factory = new BufferFactoryBasic();
@@ -23,7 +22,7 @@ namespace OOP_saudio_sim_csharp.Test
             Assert.AreNotEqual(0, buf.GetID());
         }
 
-        [TestMethod]
+        [Test]
         public void TestCreateFromResource()
         {
             IBufferFactory factory = new BufferFactoryBasic();

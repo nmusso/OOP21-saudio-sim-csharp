@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tXehDj8KqAfPHLgfJgJKXMXfwHTP6RXnG4PvUxybpmNijfXLHyCuqLFRtUs5UNz284hihX+nQo4uhG1dpM6NVw==",
+  "dgSpecHash": "ZoS7YFDKzeXYcSosGgTrF4hQdhimjwrr4reZbWm72Fdni4Fsb0S1agU3bTQHhrYAU7Dr8en6Ucui3LWeMG3Eyg==",
   "success": true,
-  "projectFilePath": "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/Test/Test.csproj",
+  "projectFilePath": "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/TestSources/TestSources.csproj",
   "expectedPackageFiles": [
     "/home/sciro/.nuget/packages/microsoft.codecoverage/16.5.0/microsoft.codecoverage.16.5.0.nupkg.sha512",
     "/home/sciro/.nuget/packages/microsoft.csharp/4.0.1/microsoft.csharp.4.0.1.nupkg.sha512",

@@ -43,7 +43,7 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
             {
                 return _sources.First(x => x.Id.Equals(id));
             }
-            catch (InvalidOperationException e)
+            catch (InvalidOperationException)
             {
                 return null;
             }
@@ -55,7 +55,7 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
             {
                 return _sources.First(x => x.Position.Equals(position));
             }
-            catch (InvalidOperationException e)
+            catch (InvalidOperationException)
             {
                 return null;
             }

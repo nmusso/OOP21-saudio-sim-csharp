@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/Test/Test.csproj": {}
+    "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/TestSources/TestSources.csproj": {}
   },
   "projects": {
-    "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/Test/Test.csproj": {
+    "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/TestSources/TestSources.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/Test/Test.csproj",
-        "projectName": "Test",
-        "projectPath": "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/Test/Test.csproj",
+        "projectUniqueName": "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/TestSources/TestSources.csproj",
+        "projectName": "TestSources",
+        "projectPath": "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/TestSources/TestSources.csproj",
         "packagesPath": "/home/sciro/.nuget/packages/",
-        "outputPath": "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/Test/obj/",
+        "outputPath": "/home/sciro/Desktop/RiderProjects/OOP21-saudio-sim-csharp/OOP_saudio_sim_csharp/TestSources/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/sciro/.nuget/NuGet/NuGet.Config"
