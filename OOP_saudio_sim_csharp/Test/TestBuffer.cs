@@ -12,7 +12,7 @@ namespace Test
         }
 
         [Test]
-        public void TestCreateFromResource()
+        public void TestCreateFromPath()
         {
             IBufferFactory factory = new BufferFactoryBasic();
 
@@ -38,17 +38,6 @@ namespace Test
             buf = factory.CreateBufferFromResource(PATH);
             Assert.AreNotEqual(0, buf.GetID());
             buf = factory.CreateBufferFromResource(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
-
-            IBufferFactory factory = new BufferFactoryBasic();
-
-            IBuffer buf = factory.CreateBufferFromPath(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
-            buf = factory.CreateBufferFromPath(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
-            buf = factory.CreateBufferFromPath(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
-            buf = factory.CreateBufferFromPath(PATH);
             Assert.AreNotEqual(0, buf.GetID());
         }
     }
