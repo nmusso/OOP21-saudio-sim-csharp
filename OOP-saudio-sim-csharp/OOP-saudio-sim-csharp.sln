@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP-saudio-sim-csharp", "OOP-saudio-sim-csharp\OOP-saudio-sim-csharp.csproj", "{59AB2601-6E90-4A60-A57A-1AA4C4A9712E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59AB2601-6E90-4A60-A57A-1AA4C4A9712E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59AB2601-6E90-4A60-A57A-1AA4C4A9712E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59AB2601-6E90-4A60-A57A-1AA4C4A9712E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59AB2601-6E90-4A60-A57A-1AA4C4A9712E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

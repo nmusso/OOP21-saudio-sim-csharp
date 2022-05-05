@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Lugaresi" />
+      <Folder Include="Mussoni" />
+      <Folder Include="Presepi" />
+      <Folder Include="Sciarrillo" />
+    </ItemGroup>
+
+</Project>
