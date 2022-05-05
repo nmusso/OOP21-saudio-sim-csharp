@@ -13,7 +13,7 @@ namespace OOP_saudio_sim_csharp.Presepi
             set
             {
                 _position = value;
-                //OpenAL.SetPosition(_position);
+                OpenAl.SetPosition(_position.X, _position.Y, _position.Z);
             }
         }
         
@@ -35,7 +35,7 @@ namespace OOP_saudio_sim_csharp.Presepi
             CurrentContext = context;
             Position = position;
             SetOrientation(up, at);
-            //OpenAL.SetValue();
+            OpenAl.SetValue();
         }
         public Listener(Context context, Vec3F position) : this(context, position, new Vec3F(0.0f, 0.0f, -1.0f), new Vec3F(0.0f, 1.0f, 0.0f))
         {
@@ -51,7 +51,7 @@ namespace OOP_saudio_sim_csharp.Presepi
             UpOrientation = up;
             float[] atUpVec = { this.UpOrientation.X, this.UpOrientation.Y, this.UpOrientation.Z,
                 this.AtOrientation.X, this.AtOrientation.Y, this.AtOrientation.Z };
-            //OpenAL.SetOrientation(atUpVec);
+            OpenAl.SetOrientation(atUpVec);
         }
     }
 }

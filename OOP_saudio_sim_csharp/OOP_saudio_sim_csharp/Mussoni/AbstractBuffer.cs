@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using OOP_saudio_sim_csharp.Utility;
 
 namespace OOP_saudio_sim_csharp.Mussoni
 {
@@ -26,8 +27,6 @@ namespace OOP_saudio_sim_csharp.Mussoni
             {
                 using (IAudioStream stream = GetAudioStream())
                 {
-                    IOpenAL al = new OpenAL();
-
                     byte[] byteArray = new byte[stream.Available()];
                     stream.Read(byteArray);
                     int sampleSize = stream.GetSampleSize();
@@ -40,8 +39,8 @@ namespace OOP_saudio_sim_csharp.Mussoni
 
                     MemoryStream audioBuffer = GetByteBuffer(byteArray);
 
-                    _id = al.ALGenBuffer();
-                    al.ALBufferData(_id, sampleSize, audioBuffer, sampleRate);
+                    _id = OpenAl.AlGenBuffer();
+                    OpenAl.AlBufferData(_id, sampleSize, audioBuffer, sampleRate);
                 }
             }
             catch (IOException e)

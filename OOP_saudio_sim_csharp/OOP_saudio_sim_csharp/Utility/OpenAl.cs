@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.InteropServices;
 using OOP_saudio_sim_csharp.Sciarrillo;
 
@@ -7,6 +9,7 @@ namespace OOP_saudio_sim_csharp.Utility
     public class OpenAl
     {
         private static int _sourceId = 0;
+        private static int _bufferId = 0;
         
         public static void SetPosition(float x, float y, float z)
         {
@@ -23,6 +26,11 @@ namespace OOP_saudio_sim_csharp.Utility
         public static int AlGenSources()
         {
             return _sourceId++;
+        }
+
+        public static int AlGenBuffer()
+        {
+            return ++_bufferId;
         }
 
         public static void AlSource3f(int id, float x, float y, float z)
@@ -46,6 +54,9 @@ namespace OOP_saudio_sim_csharp.Utility
         }
 
         public static void AlDeleteSources(int id)
+        {
+        }
+        public static void AlBufferData(int id, int sampleSize, MemoryStream buffer, int sampleRate)
         {
         }
 
