@@ -1225,6 +1225,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "OOP_saudio_sim_csharp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/OOP_saudio_sim_csharp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OOP_saudio_sim_csharp.dll": {}
+        }
       }
     }
   },
@@ -4613,13 +4623,19 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "OOP_saudio_sim_csharp/1.0.0": {
+      "type": "project",
+      "path": "../OOP_saudio_sim_csharp/OOP_saudio_sim_csharp.csproj",
+      "msbuildProject": "../OOP_saudio_sim_csharp/OOP_saudio_sim_csharp.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
-      "NUnit3TestAdapter >= 3.16.1"
+      "NUnit3TestAdapter >= 3.16.1",
+      "OOP_saudio_sim_csharp >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4648,7 +4664,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\nicco\\project_workspace\\OOP21-saudio-sim-csharp\\OOP_saudio_sim_csharp\\OOP_saudio_sim_csharp\\OOP_saudio_sim_csharp.csproj": {
+              "projectPath": "C:\\Users\\nicco\\project_workspace\\OOP21-saudio-sim-csharp\\OOP_saudio_sim_csharp\\OOP_saudio_sim_csharp\\OOP_saudio_sim_csharp.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
