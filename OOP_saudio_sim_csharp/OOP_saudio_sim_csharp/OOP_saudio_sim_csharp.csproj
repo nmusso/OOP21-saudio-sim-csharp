@@ -8,7 +8,6 @@
     <ItemGroup>
       <Folder Include="Lugaresi" />
       <Folder Include="Mussoni" />
-      <Folder Include="Presepi" />
       <Folder Include="Sciarrillo" />
     </ItemGroup>
 
