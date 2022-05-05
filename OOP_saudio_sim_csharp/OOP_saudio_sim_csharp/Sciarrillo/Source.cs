@@ -1,49 +1,60 @@
+using OOP_saudio_sim_csharp.Utility;
+
 namespace OOP_saudio_sim_csharp.Sciarrillo
 {
     public class Source : ISource
     {
-        public int Position { get; set; } //lib
+        private Vec3F _position;
+        public Vec3F Position
+        {
+            get => _position;
+            set
+            {
+                _position = value;
+                OpenAl.AlSource3f(Id,value.X,value.Y,value.Z);
+            }
+        }
         public int Id { get; }
         public bool IsPlaying { get; private set; }
 
         public Source()
         {
-            Id = 0; //lib
-            Position = 0; //lib
+            Id = OpenAl.AlGenSources();
+            Position = new Vec3F(0.0f);
         }
         
-        public Source(int position)
+        public Source(Vec3F position)
         {
-            Id = 0; //lib
-            Position = position; //lib
+            Id = OpenAl.AlGenSources();
+            Position = position;
         }
 
         public void Play()
         {
             IsPlaying = true;
-            //lib call
+            OpenAl.AlPlay(Id);
         }
 
         public void Pause()
         {
             IsPlaying = false;
-            //lib call
+            OpenAl.AlPause(Id);
         }
 
         public void Stop()
         {
             IsPlaying = false;
-            //lib call
+            OpenAl.AlStop(Id);
         }
 
         public void GenerateSource(int buffer)
         {
-            //lib call
+            OpenAl.AlSourcei(buffer);
         }
 
         public void Delete()
         {
-            //lib call
+            OpenAl.AlDeleteSources(Id);
         }
     }
 }
