@@ -1,21 +1,21 @@
 using System;
 
-namespace OOP_presepi_csharp
+namespace OOP_presepi_csharp.Presepi
 {
-    public class Vec3f
+    public class Vec3F
     {
         public float X { get; set; }
         public float Y { get; set; }
         public float Z { get; set; }
 
-        public Vec3f(float x, float y, float z)
+        public Vec3F(float x, float y, float z)
         {
             this.X = x;
             this.Y = y;
             this.Z = z;
         }
 
-        public Vec3f(float value) : this(value, value, value)
+        public Vec3F(float value) : this(value, value, value)
         {
         }
 
@@ -27,7 +27,7 @@ namespace OOP_presepi_csharp
         }
         
         /// <inheritdoc cref="IEquatable{T}.Equals(T)"/>
-        public bool Equals(Vec3f other)
+        public bool Equals(Vec3F other)
         {
             return this.X.CompareTo(other.X)==0;
         }
@@ -50,7 +50,7 @@ namespace OOP_presepi_csharp
                 return false;
             }
 
-            return this.Equals(obj as Vec3f);
+            return this.Equals(obj as Vec3F);
         }
     }
 }
