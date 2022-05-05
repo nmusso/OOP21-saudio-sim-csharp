@@ -1,4 +1,7 @@
 OOP_saudio_sim_csharp/.idea
 OOP_saudio_sim_csharp/.vs
-*/bin
-*/obj
+OOP_saudio_sim_csharp/OOP_saudio_sim_csharp/bin/*
+OOP_saudio_sim_csharp/OOP_saudio_sim_csharp/obj/*
+OOP_saudio_sim_csharp/Test/bin/*
+OOP_saudio_sim_csharp/Test/obj/*
+
