@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace Buffer
+namespace OOP_saudio_sim_csharp.Mussoni
 {
     public abstract class AbstractBuffer : IBuffer
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Buffer
+namespace OOP_saudio_sim_csharp.Mussoni
 {
     public class ConvertToMono
     {
