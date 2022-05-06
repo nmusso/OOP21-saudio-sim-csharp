@@ -22,7 +22,7 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
             _sources = new List<IFrSource>(sources);
         }
 
-        public IList<IFrSource> GetAll() => new ReadOnlyCollection<IFrSource>(_sources);
+        public IList<IFrSource> GetAll() => _sources.ToImmutableList();
 
         public IList<Vec3F> GetAllPositions() => _sources.Select(x => x.Position).ToList().ToImmutableList();
         
