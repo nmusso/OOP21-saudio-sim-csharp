@@ -16,14 +16,8 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
             } 
         }
 
-        public FrSource(SourceType type)
-        {
-            Type = type;
-        }
-
-        public FrSource(Vec3F position, SourceType type) : base(position)
-        {
-            Type = type;
-        }
+        public FrSource(SourceType type) => Type = type;
+        
+        public FrSource(Vec3F position, SourceType type) : base(position) => Type = type;
     }
 }

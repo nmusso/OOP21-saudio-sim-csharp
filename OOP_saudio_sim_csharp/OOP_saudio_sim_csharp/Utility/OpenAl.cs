@@ -60,7 +60,7 @@ namespace OOP_saudio_sim_csharp.Utility
         {
         }
 
-        public static void ApplyFilter(IFRSource s, SourceType type)
+        public static void ApplyFilter(IFrSource s, SourceType type)
         {
         }
     }

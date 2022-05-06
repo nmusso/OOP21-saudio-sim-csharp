@@ -5,15 +5,17 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
     public class Source : ISource
     {
         private Vec3F _position;
+
         public Vec3F Position
         {
             get => _position;
             set
             {
                 _position = value;
-                OpenAl.AlSource3f(Id,value.X,value.Y,value.Z);
+                OpenAl.AlSource3f(Id, value.X, value.Y, value.Z);
             }
         }
+
         public int Id { get; }
         public bool IsPlaying { get; private set; }
 
@@ -47,14 +49,8 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
             OpenAl.AlStop(Id);
         }
 
-        public void GenerateSource(int buffer)
-        {
-            OpenAl.AlSourcei(buffer);
-        }
-
-        public void Delete()
-        {
-            OpenAl.AlDeleteSources(Id);
-        }
+        public void GenerateSource(int buffer) => OpenAl.AlSourcei(buffer);
+        
+        public void Delete() => OpenAl.AlDeleteSources(Id);
     }
 }
