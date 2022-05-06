@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace OOP_saudio_sim_csharp.Presepi
 {
-    public class Listener:IListener
+    public class Listener : IListener
     {
         public Context CurrentContext { get; private set; }
-        
         private Vec3F _position;
+
         public Vec3F Position
         {
             get => _position;
@@ -56,6 +56,11 @@ namespace OOP_saudio_sim_csharp.Presepi
         {
             return obj is Listener listener &&
                    EqualityComparer<Context>.Default.Equals(CurrentContext, listener.CurrentContext);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(CurrentContext);
         }
     }
 }

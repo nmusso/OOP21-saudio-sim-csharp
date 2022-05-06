@@ -30,7 +30,7 @@ namespace OOP_saudio_sim_csharp.Presepi
                                            + Math.Pow(p.Position.Y - _listener.Position.Y, 2)))
                     .Min();
             }
-            catch(Exception e)
+            catch (Exception)
             {
                 return -1;
             }
