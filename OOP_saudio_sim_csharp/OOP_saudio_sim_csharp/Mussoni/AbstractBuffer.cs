@@ -31,7 +31,9 @@ namespace OOP_saudio_sim_csharp.Mussoni
                     stream.Read(byteArray);
 
                     if (stream.GetChannels() == 2)
+                    {
                         ConvertToMono.Convert(ref byteArray);
+                    }
 
                     MemoryStream audioBuffer = GetByteBuffer(byteArray);
 
@@ -54,7 +56,9 @@ namespace OOP_saudio_sim_csharp.Mussoni
             using (BinaryWriter writer = new BinaryWriter(buffer))
             {
                 foreach (byte b in byteArray)
+                {
                     writer.Write(b);
+                }
             }
 
             return buffer;
