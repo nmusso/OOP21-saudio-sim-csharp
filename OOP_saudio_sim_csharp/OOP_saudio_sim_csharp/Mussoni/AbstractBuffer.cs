@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Diagnostics;
 using OOP_saudio_sim_csharp.Utility;
 
 namespace OOP_saudio_sim_csharp.Mussoni
 {
     public abstract class AbstractBuffer : IBuffer
     {
-        public string File { get; }
+        public string FilePath { get; }
 
         public int ID { get; private set; }
 
         public AbstractBuffer(string file)
         {
-            File = file;
+            FilePath = file;
             GenerateBuffer();
         }
 
