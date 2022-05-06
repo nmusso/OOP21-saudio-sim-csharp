@@ -1,14 +1,16 @@
-namespace OOP_presepi_csharp
+using  OOP_saudio_sim_csharp.Utility;
+
+namespace OOP_saudio_sim_csharp.Presepi
 {
     public interface IListener
     {
         Context CurrentContext { get; }
-        Vec3f Position { get; set; }
+        Vec3F Position { get; set; }
         
-        void SetOrientation(Vec3f up, Vec3f at);
+        void SetOrientation(Vec3F up, Vec3F at);
         
-        Vec3f AtOrientation { get; set; }
+        Vec3F AtOrientation { get; set; }
 
-        Vec3f UpOrientation { get; }
+        Vec3F UpOrientation { get; }
     }
 }

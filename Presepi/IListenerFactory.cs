@@ -1,11 +1,14 @@
-namespace OOP_presepi_csharp
+using  OOP_saudio_sim_csharp.Utility;
+
+
+namespace OOP_saudio_sim_csharp.Presepi
 {
     public interface IListenerFactory
     {
         Listener CreateListener(Context context);
         
-        Listener CreateListenerWithPos(Context context, Vec3f position);
+        Listener CreateListenerWithPos(Context context, Vec3F position);
         
-        Listener CreateListenerOriented(Context context, Vec3f position, Vec3f up, Vec3f at);
+        Listener CreateListenerOriented(Context context, Vec3F position, Vec3F up, Vec3F at);
     }
 }
