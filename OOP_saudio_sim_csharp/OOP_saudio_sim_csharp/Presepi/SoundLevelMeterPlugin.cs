@@ -1,3 +1,4 @@
+#nullable enable
 using System;
 using System.Linq;
 using OOP_saudio_sim_csharp.Sciarrillo;
@@ -10,7 +11,7 @@ namespace OOP_saudio_sim_csharp.Presepi
         private const float SafetyDistance = 3;
         private const int MaxValueColor = 255;
         private readonly IListener _listener;
-        private ISourcesHub? Sources { get; set; }
+        public ISourcesHub? Sources { get; set; }
 
         public SoundLevelMeterPlugin(IListener listener)
         {
@@ -18,8 +19,6 @@ namespace OOP_saudio_sim_csharp.Presepi
             Sources = null;
             Enable();
         }
-
-        public bool SourceHubPresent() => Sources == null;
 
         private double SourceDistanceMin()
         {
@@ -52,7 +51,7 @@ namespace OOP_saudio_sim_csharp.Presepi
         
         public Vec3F GetRgbColor() {
             var distanceMin = SourceDistanceMin();
-            if (IsEnabled || !SourceHubPresent() || distanceMin.CompareTo(-1d) == 0) {
+            if (IsEnabled || Sources!=null || distanceMin.CompareTo(-1d) == 0) {
                 return new Vec3F(MaxValueColor, MaxValueColor, MaxValueColor);
             }
 

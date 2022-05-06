@@ -1,6 +1,7 @@
 using System.Linq;
 using NUnit.Framework;
 using OOP_saudio_sim_csharp.Presepi;
+using OOP_saudio_sim_csharp.Sciarrillo;
 using OOP_saudio_sim_csharp.Utility;
 
 namespace Test
@@ -67,8 +68,8 @@ namespace Test
         public void TestAddRemovePlugin()
         {
             IListener listener = _lsFactory.CreateListener(new Context());
-            PluginManager mng = new PluginManager();
-            SoundLevelMeterPlugin soundL = new SoundLevelMeterPlugin(listener);
+            var mng = new PluginManager();
+            var soundL = new SoundLevelMeterPlugin(listener);
             
             mng.AddPlugin(soundL);
             Assert.True(mng.GetPlugins().Contains(soundL));
@@ -86,8 +87,8 @@ namespace Test
         public void TestEnableDisablePlugin()
         {
             IListener listener = _lsFactory.CreateListener(new Context());
-            PluginManager mng = new PluginManager();
-            SoundLevelMeterPlugin soundL = new SoundLevelMeterPlugin(listener);
+            var mng = new PluginManager();
+            var soundL = new SoundLevelMeterPlugin(listener);
 
             mng.AddPlugin(soundL);
             
@@ -98,6 +99,35 @@ namespace Test
             Assert.True(mng.GetPlugins().First(p => p.Equals(soundL)).IsEnabled);
             
         }
-        
+
+        [Test]
+        public void TestSoundLevelMeterPlugin()
+        {
+            var maxBit = 255;
+            Listener listener = _lsFactory.CreateListener(new Context());
+            var plugin = new SoundLevelMeterPlugin(listener);
+            ISourcesHub sources = new SourcesHub();
+            
+            Assert.True(plugin.IsEnabled);
+            Assert.IsNull(plugin.Sources);
+            Assert.AreEqual(plugin.GetRgbColor(), new Vec3F(maxBit));
+            
+            listener.Position = new Vec3F(2.0f);
+            IFrSource source = new FrSource(new Vec3F(2.0f), SourceType.Full);
+            sources.AddSource(source);
+            
+            plugin.Sources = sources;
+            Assert.IsNotNull(plugin.Sources);
+            Assert.AreEqual(plugin.GetRgbColor(), new Vec3F(maxBit));
+            
+            source.Play();
+            Assert.AreEqual(plugin.GetRgbColor(), new Vec3F(maxBit, 0.0f, 0.0f));
+            
+            plugin.Disable();
+            Assert.False(plugin.IsEnabled);
+            Assert.AreEqual(plugin.GetRgbColor(), new Vec3F(maxBit));
+            
+        }
+
     }
 }
