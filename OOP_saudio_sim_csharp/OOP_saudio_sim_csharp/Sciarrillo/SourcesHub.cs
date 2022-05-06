@@ -9,22 +9,22 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
 {
     public class SourcesHub : ISourcesHub
     {
-        private readonly IList<IFRSource> _sources;
+        private readonly IList<IFrSource> _sources;
 
         public SourcesHub()
         {
-            _sources = new List<IFRSource>();
+            _sources = new List<IFrSource>();
         }
         
-        public SourcesHub(IList<IFRSource> sources)
+        public SourcesHub(IList<IFrSource> sources)
         {
-            _sources = new List<IFRSource>();
+            _sources = new List<IFrSource>();
             _sources = sources;
         }
 
-        public IList<IFRSource> GetAll()
+        public IList<IFrSource> GetAll()
         {
-            return new ReadOnlyCollection<IFRSource>(_sources);
+            return new ReadOnlyCollection<IFrSource>(_sources);
         }
 
         public IList<Vec3F> GetAllPositions()
@@ -32,12 +32,12 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
             return  _sources.Select(x => x.Position).ToList().AsReadOnly();
         }
 
-        public IList<IFRSource> GetPlaying()
+        public IList<IFrSource> GetPlaying()
         {
             return _sources.Where(x=>x.IsPlaying.Equals(true)).ToList().AsReadOnly();
         }
 
-        public IFRSource? GetSource(int id)
+        public IFrSource? GetSource(int id)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
             }
         }
 
-        public IFRSource? GetSourceFromPos(Vec3F position)
+        public IFrSource? GetSourceFromPos(Vec3F position)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
             }
         }
 
-        public void AddSource(IFRSource s)
+        public void AddSource(IFrSource s)
         {
             if (!_sources.Contains(s))
             {
@@ -69,7 +69,7 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
             }
         }
 
-        public void RemoveSource(IFRSource s)
+        public void RemoveSource(IFrSource s)
         {
             _sources.Remove(s);
         }

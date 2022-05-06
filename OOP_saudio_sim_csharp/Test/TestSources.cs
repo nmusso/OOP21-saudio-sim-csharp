@@ -47,21 +47,21 @@ namespace Test
         [Test]
         public void TestBasicChangePosition()
         {
-            float x = 1.0f;
-            float y = -10.0f;
-            float z = 0.5f;
+            const float x = 1.0f;
+            const float y = -10.0f;
+            const float z = 0.5f;
 
             ISource s = new Source(new Vec3F(0.0f));
             Assert.AreEqual(s.Position, new Vec3F(0.0f));
-            Vec3F pos = new Vec3F(x, y, z);
+            var pos = new Vec3F(x, y, z);
             s.Position = pos;
             Assert.AreEqual(s.Position, pos);
         }
         
         [Test]
-        public void TestBasicFRSource()
+        public void TestBasicFrSource()
         {
-            IFRSource frs = new FRSource(SourceType.Full);
+            IFrSource frs = new FrSource(SourceType.Full);
             
             Assert.AreEqual(frs.Type, SourceType.Full);
             frs.Type = SourceType.High;
@@ -73,9 +73,9 @@ namespace Test
         }
         
         [Test]
-        public void TestAdvancedFRSource()
+        public void TestAdvancedFrSource()
         {
-            IFRSource frs = new FRSource(SourceType.Full);
+            IFrSource frs = new FrSource(SourceType.Full);
             
             frs.Type=SourceType.High;
             Assert.AreEqual(frs.Type, SourceType.High);
@@ -93,9 +93,9 @@ namespace Test
         public void TestSourcesHub()
         {
             ISourcesHub sHub = new SourcesHub();
-            IFRSource s1 = new FRSource(SourceType.Full);
-            IFRSource s2 = new FRSource(SourceType.Full);
-            IFRSource s3 = new FRSource(SourceType.Full);
+            IFrSource s1 = new FrSource(SourceType.Full);
+            IFrSource s2 = new FrSource(SourceType.Full);
+            IFrSource s3 = new FrSource(SourceType.Full);
 
             var origin = new Vec3F(0.0f);
             var fiveV = new Vec3F(5.0f);
@@ -104,15 +104,15 @@ namespace Test
             sHub.AddSource(s2);
             sHub.AddSource(s3);
             
-            Assert.AreEqual(sHub.GetAll(), new List<IFRSource>() { s1, s2, s3 });
-            Assert.AreEqual(sHub.GetAllPositions(), new List<Vec3F>() { s1.Position, s2.Position, s3.Position });
+            Assert.AreEqual(sHub.GetAll(), new List<IFrSource>() { s1, s2, s3 });
+            Assert.AreEqual(sHub.GetAllPositions(), new List<Vec3F>() { origin, origin, origin });
             
             sHub.PlayAll();
-            Assert.AreEqual(sHub.GetPlaying(), new List<IFRSource>() { s1, s2, s3 });
+            Assert.AreEqual(sHub.GetPlaying(), new List<IFrSource>() { s1, s2, s3 });
             sHub.PauseAll();
             Assert.IsEmpty(sHub.GetPlaying());
             sHub.PlayAll();
-            Assert.AreEqual(sHub.GetPlaying(), new List<IFRSource>() { s1, s2, s3 });
+            Assert.AreEqual(sHub.GetPlaying(), new List<IFrSource>() { s1, s2, s3 });
             sHub.StopAll();
             Assert.IsEmpty(sHub.GetPlaying());
 

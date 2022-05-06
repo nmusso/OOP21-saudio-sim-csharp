@@ -6,19 +6,19 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
 {
     public interface ISourcesHub
     {
-        IList<IFRSource> GetAll();
+        IList<IFrSource> GetAll();
 
         IList<Vec3F> GetAllPositions();
 
-        IList<IFRSource> GetPlaying();
+        IList<IFrSource> GetPlaying();
 
-        IFRSource? GetSource(int id);
+        IFrSource? GetSource(int id);
 
-        IFRSource? GetSourceFromPos(Vec3F position);
+        IFrSource? GetSourceFromPos(Vec3F position);
 
-        void AddSource(IFRSource s);
+        void AddSource(IFrSource s);
 
-        void RemoveSource(IFRSource s);
+        void RemoveSource(IFrSource s);
 
         void PlayAll();
 

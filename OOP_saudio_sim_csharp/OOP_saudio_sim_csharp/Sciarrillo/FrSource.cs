@@ -1,9 +1,8 @@
-using System.Runtime.InteropServices;
 using OOP_saudio_sim_csharp.Utility;
 
 namespace OOP_saudio_sim_csharp.Sciarrillo
 {
-    public class FRSource : Source, IFRSource
+    public class FrSource : Source, IFrSource
     {
         private SourceType _type;
 
@@ -17,12 +16,12 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
             } 
         }
 
-        public FRSource(SourceType type) : base()
+        public FrSource(SourceType type)
         {
             Type = type;
         }
 
-        public FRSource(Vec3F position, SourceType type) : base(position)
+        public FrSource(Vec3F position, SourceType type) : base(position)
         {
             Type = type;
         }
