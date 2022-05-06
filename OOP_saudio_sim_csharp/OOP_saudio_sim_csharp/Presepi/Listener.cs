@@ -1,4 +1,6 @@
 using  OOP_saudio_sim_csharp.Utility;
+using System;
+using System.Collections.Generic;
 
 namespace OOP_saudio_sim_csharp.Presepi
 {
@@ -48,6 +50,17 @@ namespace OOP_saudio_sim_csharp.Presepi
             float[] atUpVec = { this.UpOrientation.X, this.UpOrientation.Y, this.UpOrientation.Z,
                 this.AtOrientation.X, this.AtOrientation.Y, this.AtOrientation.Z };
             OpenAl.SetOrientation(atUpVec);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Listener listener &&
+                   EqualityComparer<Context>.Default.Equals(CurrentContext, listener.CurrentContext);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(CurrentContext);
         }
     }
 }

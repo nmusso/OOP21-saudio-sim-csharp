@@ -10,6 +10,7 @@ namespace OOP_saudio_sim_csharp.Utility
     {
         private static int _sourceId = 0;
         private static int _bufferId = 0;
+        private static int _contextId = 1;
         
         public static void SetPosition(float x, float y, float z)
         {
@@ -23,12 +24,9 @@ namespace OOP_saudio_sim_csharp.Utility
         {
         }
 
-        public static int AlGenSources()
-        {
-            return _sourceId++;
-        }
+        public static int AlGenSources() => ++_sourceId;
 
-        public static int AlGenBuffer() => ++_sourceId;
+        public static int AlGenBuffer() => ++_bufferId;
 
         public static void AlSource3f(int id, float x, float y, float z)
         {
@@ -60,5 +58,7 @@ namespace OOP_saudio_sim_csharp.Utility
         public static void ApplyFilter(IFrSource s, SourceType type)
         {
         }
+
+        public static int GetContextID() => _contextId;
     }
 }

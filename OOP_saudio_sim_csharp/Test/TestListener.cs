@@ -42,14 +42,11 @@ namespace Test
         public void TestFactory()
         {
             var context = new Context();
-            var context2 = new Context();
             IListener listener = _lsFactory.CreateListener(context);
             IListener listener2 = _lsFactory.CreateListener(context);
-            IListener listener3 = _lsFactory.CreateListener(context2);
             var pos = new Vec3F(3.0f);
             
             Assert.AreEqual(listener, listener2);
-            Assert.AreNotEqual(listener, listener3);
 
             listener = _lsFactory.CreateListenerWithPos(context, pos);
             Assert.AreEqual(listener.Position, pos);
