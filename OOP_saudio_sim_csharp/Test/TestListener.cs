@@ -103,17 +103,19 @@ namespace Test
         [Test]
         public void TestSoundLevelMeterPlugin()
         {
-            var maxBit = 255;
-            Listener listener = _lsFactory.CreateListener(new Context());
+            const int maxBit = 255;
+            IListener listener = _lsFactory.CreateListener(new Context());
             var plugin = new SoundLevelMeterPlugin(listener);
-            ISourcesHub sources = new SourcesHub();
+            ISourceFactory sourceFac = new SourceFactory();
+            ISourcesHubFactory sourcesFac = new SourcesHubFactory();
+            ISourcesHub sources = sourcesFac.CreateSourcesHub();
             
             Assert.True(plugin.IsEnabled);
             Assert.IsNull(plugin.Sources);
             Assert.AreEqual(plugin.GetRgbColor(), new Vec3F(maxBit));
             
             listener.Position = new Vec3F(2.0f);
-            IFrSource source = new FrSource(new Vec3F(2.0f), SourceType.Full);
+            IFrSource source = sourceFac.CreateFrSourceWithPosition(new Vec3F(2.0f), SourceType.Full);
             sources.AddSource(source);
             
             plugin.Sources = sources;

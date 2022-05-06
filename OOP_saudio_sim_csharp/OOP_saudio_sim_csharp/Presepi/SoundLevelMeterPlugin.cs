@@ -22,7 +22,7 @@ namespace OOP_saudio_sim_csharp.Presepi
 
         private double SourceDistanceMin()
         {
-            double? minDistance = null;
+            double? minDistance;
             try
             {
                 minDistance = Sources?.GetAll().Where(s => s.IsPlaying)
@@ -45,13 +45,13 @@ namespace OOP_saudio_sim_csharp.Presepi
             if (distance <= 0.0f) {
                 return 0;
             }
-            float intervals = (MaxValueColor * 2) / (SafetyDistance * 10);
+            const float intervals = (MaxValueColor * 2) / (SafetyDistance * 10);
             return (int) (Math.Round(distance * 10) * intervals);
         }
         
         public Vec3F GetRgbColor() {
             var distanceMin = SourceDistanceMin();
-            if (IsEnabled || Sources!=null || distanceMin.CompareTo(-1d) == 0) {
+            if (IsEnabled || Sources==null || distanceMin.CompareTo(-1d) == 0) {
                 return new Vec3F(MaxValueColor, MaxValueColor, MaxValueColor);
             }
 
