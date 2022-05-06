@@ -12,7 +12,7 @@ namespace OOP_saudio_sim_csharp.Lugaresi
         private readonly ISpaceFactory spcFac = new SpaceFactory();
         private readonly ISourcesHubFactory shFac = new SourcesHubFactory();
 
-        public IEnvironment CreateNEnvironment(IList<IFrSource> sources, IListener listener, ISpace spc = null) => new Environment(shFac.CreateSourcesHubFromSet(sources), listenerFac.CreateListener(new Context()), spcFac.CreateDefaultSpace());
+        public IEnvironment CreateNEnvironment(IList<IFrSource> sources, IListener listener, ISpace spc = null) => new Environment(shFac.CreateSourcesHubFromIEnumerable(sources), listenerFac.CreateListener(new Context()), spcFac.CreateDefaultSpace());
 
         public IEnvironment CreateVoidEnvironment() => new Environment(shFac.CreateSourcesHub(), listenerFac.CreateListener(new Context()), spcFac.CreateDefaultSpace());
     }

@@ -6,6 +6,6 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
     {
         SourcesHub CreateSourcesHub();
         
-        SourcesHub CreateSourcesHubFromSet(IList<IFrSource> sources);
+        SourcesHub CreateSourcesHubFromIEnumerable(IEnumerable<IFrSource> sources);
     }
 }

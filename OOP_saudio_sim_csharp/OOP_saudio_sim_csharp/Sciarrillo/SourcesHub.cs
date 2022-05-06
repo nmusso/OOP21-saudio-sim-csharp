@@ -1,6 +1,7 @@
 #nullable enable
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Collections.ObjectModel;
 using System.Linq;
 using OOP_saudio_sim_csharp.Utility;
@@ -16,17 +17,16 @@ namespace OOP_saudio_sim_csharp.Sciarrillo
             _sources = new List<IFrSource>();
         }
         
-        public SourcesHub(IList<IFrSource> sources)
+        public SourcesHub(IEnumerable<IFrSource> sources)
         {
-            _sources = new List<IFrSource>();
-            _sources = sources;
+            _sources = new List<IFrSource>(sources);
         }
 
         public IList<IFrSource> GetAll() => new ReadOnlyCollection<IFrSource>(_sources);
 
-        public IList<Vec3F> GetAllPositions() => _sources.Select(x => x.Position).ToList().AsReadOnly();
+        public IList<Vec3F> GetAllPositions() => _sources.Select(x => x.Position).ToList().ToImmutableList();
         
-        public IList<IFrSource> GetPlaying() => _sources.Where(x=>x.IsPlaying.Equals(true)).ToList().AsReadOnly();
+        public IList<IFrSource> GetPlaying() => _sources.Where(x=>x.IsPlaying.Equals(true)).ToList().ToImmutableList();
         
         public IFrSource? GetSource(int id)
         {
