@@ -7,6 +7,7 @@ namespace OOP_saudio_sim_csharp.Mussoni
     public class AudioStream : IAudioStream
     {
         private readonly string _filePath;
+
         public AudioStream(string filePath)
         {
             _filePath = filePath;

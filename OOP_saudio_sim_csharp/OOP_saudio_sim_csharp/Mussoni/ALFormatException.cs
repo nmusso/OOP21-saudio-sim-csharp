@@ -6,14 +6,20 @@ namespace OOP_saudio_sim_csharp.Mussoni
 {
     class ALFormatException : Exception
     {
-        public ALFormatException(string message, Exception e)
+        private readonly string error;
+
+        public ALFormatException(string message) : base(message)
         {
-            Console.WriteLine(message + "\n" + e.StackTrace);
+            error = message;
         }
 
-        public ALFormatException(string message)
+        public ALFormatException(string message, Exception e) : base(message, e) 
         {
-            Console.WriteLine(message);
+        }
+
+        public override string ToString()
+        {
+            return error + ", the file is not a 8 or 16 bit mono audio file";
         }
     }
 }

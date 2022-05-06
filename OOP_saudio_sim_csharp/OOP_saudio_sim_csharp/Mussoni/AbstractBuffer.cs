@@ -8,18 +8,15 @@ namespace OOP_saudio_sim_csharp.Mussoni
 {
     public abstract class AbstractBuffer : IBuffer
     {
-        private readonly string _file;
-        private int _id;
+        public string File { get; }
+
+        public int ID { get; private set; }
 
         public AbstractBuffer(string file)
         {
-            _file = file;
+            File = file;
             GenerateBuffer();
         }
-
-        public string GetFile() => _file;
-
-        public int GetID() => _id;
 
         private void GenerateBuffer()
         {
@@ -27,20 +24,18 @@ namespace OOP_saudio_sim_csharp.Mussoni
             {
                 using (IAudioStream stream = GetAudioStream())
                 {
-                    byte[] byteArray = new byte[stream.Available()];
-                    stream.Read(byteArray);
                     int sampleSize = stream.GetSampleSize();
                     int sampleRate = stream.GetSampleRate();
+                    byte[] byteArray = new byte[stream.Available()];
+                    stream.Read(byteArray);
 
                     if (stream.GetChannels() == 2)
-                    {
-                        ConvertToMono.Convert(byteArray);
-                    }
+                        ConvertToMono.Convert(ref byteArray);
 
                     MemoryStream audioBuffer = GetByteBuffer(byteArray);
 
-                    _id = OpenAl.AlGenBuffer();
-                    OpenAl.AlBufferData(_id, sampleSize, audioBuffer, sampleRate);
+                    ID = OpenAl.AlGenBuffer();
+                    OpenAl.AlBufferData(ID, sampleSize, audioBuffer, sampleRate);
                 }
             }
             catch (IOException e)
@@ -54,12 +49,11 @@ namespace OOP_saudio_sim_csharp.Mussoni
         private MemoryStream GetByteBuffer(byte[] byteArray)
         {
             MemoryStream buffer = new MemoryStream();
+
             using (BinaryWriter writer = new BinaryWriter(buffer))
             {
                 foreach (byte b in byteArray)
-                {
                     writer.Write(b);
-                }
             }
 
             return buffer;

@@ -5,11 +5,7 @@ namespace Test
 {
     public class TestBuffer
     {
-        const string PATH = "";
-        [SetUp]
-        public void Setup()
-        {
-        }
+        const string PATH = "fakeDir";
 
         [Test]
         public void TestCreateFromPath()
@@ -17,13 +13,13 @@ namespace Test
             IBufferFactory factory = new BufferFactoryBasic();
 
             IBuffer buf = factory.CreateBufferFromPath(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
+            Assert.AreNotEqual(0, buf.ID);
             buf = factory.CreateBufferFromPath(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
+            Assert.AreNotEqual(0, buf.ID);
             buf = factory.CreateBufferFromPath(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
+            Assert.AreNotEqual(0, buf.ID);
             buf = factory.CreateBufferFromPath(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
+            Assert.AreNotEqual(0, buf.ID);
         }
 
         [Test]
@@ -32,13 +28,13 @@ namespace Test
             IBufferFactory factory = new BufferFactoryBasic();
 
             IBuffer buf = factory.CreateBufferFromResource(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
+            Assert.AreNotEqual(0, buf.ID));
             buf = factory.CreateBufferFromResource(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
+            Assert.AreNotEqual(0, buf.ID);
             buf = factory.CreateBufferFromResource(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
+            Assert.AreNotEqual(0, buf.ID);
             buf = factory.CreateBufferFromResource(PATH);
-            Assert.AreNotEqual(0, buf.GetID());
+            Assert.AreNotEqual(0, buf.ID);
         }
     }
 }

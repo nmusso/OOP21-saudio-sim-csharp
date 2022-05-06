@@ -13,12 +13,10 @@ namespace OOP_saudio_sim_csharp.Mussoni
 
         protected override IAudioStream GetAudioStream()
         {
-            if (!LoadFile(base.GetFile()))
-            {
+            if (!LoadFile(base.File))
                 throw new FileNotFoundException();
-            }
 
-            return new AudioStream(base.GetFile());
+            return new AudioStream(base.File);
         }
 
         private bool LoadFile(string path)
