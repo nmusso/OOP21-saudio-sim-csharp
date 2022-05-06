@@ -1,24 +1,25 @@
 using NUnit.Framework;
 using OOP_saudio_sim_csharp.Mussoni;
+using System.IO;
 
 namespace Test
 {
     public class TestBuffer
     {
-        const string PATH = "fakeDir";
+        public static readonly string Path = "";
 
         [Test]
         public void TestCreateFromPath()
         {
             IBufferFactory factory = new BufferFactoryBasic();
 
-            IBuffer buf = factory.CreateBufferFromPath(PATH);
+            IBuffer buf = factory.CreateBufferFromPath(Path);
             Assert.AreNotEqual(0, buf.ID);
-            buf = factory.CreateBufferFromPath(PATH);
+            buf = factory.CreateBufferFromPath(Path);
             Assert.AreNotEqual(0, buf.ID);
-            buf = factory.CreateBufferFromPath(PATH);
+            buf = factory.CreateBufferFromPath(Path);
             Assert.AreNotEqual(0, buf.ID);
-            buf = factory.CreateBufferFromPath(PATH);
+            buf = factory.CreateBufferFromPath(Path);
             Assert.AreNotEqual(0, buf.ID);
         }
 
@@ -27,13 +28,13 @@ namespace Test
         {
             IBufferFactory factory = new BufferFactoryBasic();
 
-            IBuffer buf = factory.CreateBufferFromResource(PATH);
-            Assert.AreNotEqual(0, buf.ID));
-            buf = factory.CreateBufferFromResource(PATH);
+            IBuffer buf = factory.CreateBufferFromResource(Path);
             Assert.AreNotEqual(0, buf.ID);
-            buf = factory.CreateBufferFromResource(PATH);
+            buf = factory.CreateBufferFromResource(Path);
             Assert.AreNotEqual(0, buf.ID);
-            buf = factory.CreateBufferFromResource(PATH);
+            buf = factory.CreateBufferFromResource(Path);
+            Assert.AreNotEqual(0, buf.ID);
+            buf = factory.CreateBufferFromResource(Path);
             Assert.AreNotEqual(0, buf.ID);
         }
     }
