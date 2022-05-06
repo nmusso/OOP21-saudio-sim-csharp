@@ -15,8 +15,9 @@ namespace Test
         [Test]
         public void TestBasicPlayPauseStop()
         {
-            ISource s = new Source();
-            
+            ISourceFactory sf = new SourceFactory();
+            ISource s = sf.CreateSource();
+
             s.Play();
             Assert.True(s.IsPlaying);
             s.Pause();
@@ -29,7 +30,8 @@ namespace Test
         [Test]
         public void TestAdvancedPlayPauseStop()
         {
-            ISource s = new Source();
+            ISourceFactory sf = new SourceFactory();
+            ISource s = sf.CreateSource();
             
             s.Play();
             s.Pause();
@@ -50,8 +52,9 @@ namespace Test
             const float x = 1.0f;
             const float y = -10.0f;
             const float z = 0.5f;
-
-            ISource s = new Source(new Vec3F(0.0f));
+            ISourceFactory sf = new SourceFactory();
+            
+            ISource s = sf.CreateDefaultFrSource();
             Assert.AreEqual(s.Position, new Vec3F(0.0f));
             var pos = new Vec3F(x, y, z);
             s.Position = pos;
@@ -61,7 +64,8 @@ namespace Test
         [Test]
         public void TestBasicFrSource()
         {
-            IFrSource frs = new FrSource(SourceType.Full);
+            ISourceFactory sf = new SourceFactory();
+            IFrSource frs = sf.CreateDefaultFrSource();
             
             Assert.AreEqual(frs.Type, SourceType.Full);
             frs.Type = SourceType.High;
@@ -75,7 +79,8 @@ namespace Test
         [Test]
         public void TestAdvancedFrSource()
         {
-            IFrSource frs = new FrSource(SourceType.Full);
+            ISourceFactory sf = new SourceFactory();
+            IFrSource frs = sf.CreateDefaultFrSource();
             
             frs.Type=SourceType.High;
             Assert.AreEqual(frs.Type, SourceType.High);
@@ -92,10 +97,13 @@ namespace Test
         [Test]
         public void TestSourcesHub()
         {
-            ISourcesHub sHub = new SourcesHub();
-            IFrSource s1 = new FrSource(SourceType.Full);
-            IFrSource s2 = new FrSource(SourceType.Full);
-            IFrSource s3 = new FrSource(SourceType.Full);
+            ISourcesHubFactory sfHub = new SourcesHubFactory();
+            ISourceFactory sf = new SourceFactory();
+            
+            ISourcesHub sHub = sfHub.CreateSourcesHub();
+            IFrSource s1 = sf.CreateDefaultFrSource();
+            IFrSource s2 = sf.CreateDefaultFrSource();
+            IFrSource s3 = sf.CreateDefaultFrSource();
 
             var origin = new Vec3F(0.0f);
             var fiveV = new Vec3F(5.0f);

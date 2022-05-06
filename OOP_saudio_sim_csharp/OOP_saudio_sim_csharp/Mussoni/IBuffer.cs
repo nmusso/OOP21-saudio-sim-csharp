@@ -6,7 +6,7 @@ namespace OOP_saudio_sim_csharp.Mussoni
 {
     public interface IBuffer
     {
-        string File { get; }
+        string FilePath { get; }
         int ID { get; }
     }
 }

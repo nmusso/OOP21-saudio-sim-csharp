@@ -28,10 +28,7 @@ namespace OOP_saudio_sim_csharp.Utility
             return _sourceId++;
         }
 
-        public static int AlGenBuffer()
-        {
-            return ++_bufferId;
-        }
+        public static int AlGenBuffer() => ++_sourceId;
 
         public static void AlSource3f(int id, float x, float y, float z)
         {

@@ -12,7 +12,7 @@ namespace OOP_saudio_sim_csharp.Mussoni
 
         protected override IAudioStream GetAudioStream()
         {
-            return new AudioStream(base.File);
+            return new AudioStream(base.FilePath);
         }
     }
 }

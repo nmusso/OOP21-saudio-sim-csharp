@@ -6,7 +6,7 @@ namespace Test
 {
     public class TestBuffer
     {
-        public static readonly string Path = "";
+        const string Path = "fakeDir";
 
         [Test]
         public void TestCreateFromPath()
