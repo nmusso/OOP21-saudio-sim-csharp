@@ -15,6 +15,7 @@ namespace OOP_saudio_sim_csharp.Mussoni
 
         public ALFormatException(string message, Exception e) : base(message, e) 
         {
+            error = message;
         }
 
         public override string ToString()
