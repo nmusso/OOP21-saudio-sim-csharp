@@ -19,9 +19,9 @@ namespace OOP_saudio_sim_csharp.Presepi
 
         public void RemovePlugin(IPlugin plugin) =>  _plugins.Remove(plugin);
 
-        public void EnableAll() => _plugins.AsParallel().ForAll(p => p.Disable());
+        public void EnableAll() => _plugins.ToList().ForEach(p => p.Enable());
         
-        public void DisableAll() => _plugins.AsParallel().ForAll(p => p.Enable());
+        public void DisableAll() => _plugins.ToList().ForEach(p => p.Disable());
         
         
         

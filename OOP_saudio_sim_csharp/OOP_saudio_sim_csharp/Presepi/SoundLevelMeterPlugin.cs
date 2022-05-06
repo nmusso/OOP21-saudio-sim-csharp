@@ -7,12 +7,12 @@ namespace OOP_saudio_sim_csharp.Presepi
 {
     public class SoundLevelMeterPlugin : AbstractPlugin
     {
-        private static readonly float SAFETY_DISTANCE = 3;
-        private static readonly int MAX_VALUE_COLOR = 255;
-        private readonly Listener _listener;
+        private const float SafetyDistance = 3;
+        private const int MaxValueColor = 255;
+        private readonly IListener _listener;
         private ISourcesHub? Sources { get; set; }
 
-        public SoundLevelMeterPlugin(Listener listener)
+        public SoundLevelMeterPlugin(IListener listener)
         {
             _listener = listener;
             Sources = null;
@@ -40,25 +40,25 @@ namespace OOP_saudio_sim_csharp.Presepi
         }
         
         private int GetMappedColor(double distance) {
-            if (distance >= SAFETY_DISTANCE) {
-                return MAX_VALUE_COLOR * 2;
+            if (distance >= SafetyDistance) {
+                return MaxValueColor * 2;
             }
             if (distance <= 0.0f) {
                 return 0;
             }
-            float intervals = (MAX_VALUE_COLOR * 2) / (SAFETY_DISTANCE * 10);
+            float intervals = (MaxValueColor * 2) / (SafetyDistance * 10);
             return (int) (Math.Round(distance * 10) * intervals);
         }
         
         public Vec3F GetRgbColor() {
             var distanceMin = SourceDistanceMin();
             if (IsEnabled || !SourceHubPresent() || distanceMin.CompareTo(-1d) == 0) {
-                return new Vec3F(MAX_VALUE_COLOR, MAX_VALUE_COLOR, MAX_VALUE_COLOR);
+                return new Vec3F(MaxValueColor, MaxValueColor, MaxValueColor);
             }
 
             var mappedColor = GetMappedColor(distanceMin);
-            return mappedColor <= MAX_VALUE_COLOR ? new Vec3F(MAX_VALUE_COLOR, mappedColor, 0.0f)
-                                                  : new Vec3F(MAX_VALUE_COLOR - (mappedColor - MAX_VALUE_COLOR), MAX_VALUE_COLOR, 0.0f);
+            return mappedColor <= MaxValueColor ? new Vec3F(MaxValueColor, mappedColor, 0.0f)
+                                                  : new Vec3F(MaxValueColor - (mappedColor - MaxValueColor), MaxValueColor, 0.0f);
 
         }
         

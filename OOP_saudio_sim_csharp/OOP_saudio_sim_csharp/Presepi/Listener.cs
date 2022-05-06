@@ -21,11 +21,7 @@ namespace OOP_saudio_sim_csharp.Presepi
         public Vec3F AtOrientation
         {
             get => _atOrientation;
-            set
-            {
-                _atOrientation = value;
-                //OpenAL.SetOrientation(null); /*TODO rivedere*/
-            }
+            set => SetOrientation(UpOrientation, value);
         }
 
         public Vec3F UpOrientation { get; private set; }
@@ -47,8 +43,8 @@ namespace OOP_saudio_sim_csharp.Presepi
         
         public void SetOrientation(Vec3F up, Vec3F at)
         {
-            AtOrientation = at;
-            UpOrientation = up;
+            _atOrientation = at;
+             UpOrientation = up;
             float[] atUpVec = { this.UpOrientation.X, this.UpOrientation.Y, this.UpOrientation.Z,
                 this.AtOrientation.X, this.AtOrientation.Y, this.AtOrientation.Z };
             OpenAl.SetOrientation(atUpVec);
