@@ -57,10 +57,5 @@ namespace OOP_saudio_sim_csharp.Presepi
             return obj is Listener listener &&
                    EqualityComparer<Context>.Default.Equals(CurrentContext, listener.CurrentContext);
         }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(CurrentContext);
-        }
     }
 }
